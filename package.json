@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@fluentui/react": "^7.149.3",
+    "@microsoft/generator-sharepoint": "^1.11.0",
+    "@microsoft/mgt": "^1.3.5",
     "@microsoft/sp-core-library": "1.11.0",
     "@microsoft/sp-lodash-subset": "1.11.0",
     "@microsoft/sp-office-ui-fabric-core": "1.11.0",
@@ -20,7 +22,6 @@
     "@microsoft/sp-webpart-base": "1.11.0",
     "@uifabric/file-type-icons": "^7.6.18",
     "mgt-react": "^1.3.0-preview.2",
-    "moment": "^2.29.1",
     "office-ui-fabric-react": "6.214.0",
     "react": "16.8.5",
     "react-dom": "16.8.5",

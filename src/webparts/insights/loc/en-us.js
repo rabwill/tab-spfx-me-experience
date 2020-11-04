@@ -3,7 +3,6 @@ define([], function() {
     "PropertyPaneDescription": "Description",
     "BasicGroupName": "Group Name",
     "DescriptionFieldLabel": "Description Field",
-    
     "DateJustNow": "just now",
     "DateMinute": "1 minute ago",
     "DateMinutesAgo": "minutes ago",

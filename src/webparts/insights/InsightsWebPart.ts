@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-import { override } from "@microsoft/decorators";
 import { Version } from '@microsoft/sp-core-library';
 import {
   IPropertyPaneConfiguration,
@@ -8,9 +7,9 @@ import {
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
-import * as strings from 'PlanningWebPartStrings';
-import Planning from './components/Planning';
-import { IPlanningProps } from './components/IPlanningProps';
+import * as strings from 'InsightsWebPartStrings';
+import Insights from './components/Insights';
+import { IInsightsProps } from './components/IInsightsProps';
 import { Providers, SharePointProvider } from '@microsoft/mgt';
 import { loadTheme } from "office-ui-fabric-react";
 const teamsDefaultTheme = require("../../common/teams-default.json");
@@ -18,12 +17,14 @@ const teamsDarkTheme = require("../../common/teams-dark.json");
 const teamsContrastTheme = require("../../common/teams-contrast.json");
 import { ThemeProvider, ThemeChangedEventArgs, IReadonlyTheme } from '@microsoft/sp-component-base';
 import GraphServices from '../../services/GraphServices';
-export interface IPlanningWebPartProps {
+import { IGraphServices } from '../../services/IGraphServices';
+
+export interface IInsightsWebPartProps {
   description: string;
 }
 
-export default class PlanningWebPart extends BaseClientSideWebPart<IPlanningWebPartProps> {
-  private graphService:any;
+export default class InsightsWebPart extends BaseClientSideWebPart<IInsightsWebPartProps> {
+  private graphService:IGraphServices;
   private _themeProvider: ThemeProvider;
   private _themeVariant: IReadonlyTheme | undefined;
   protected async onInit(): Promise<void> {
@@ -79,8 +80,8 @@ export default class PlanningWebPart extends BaseClientSideWebPart<IPlanningWebP
     }
   }
   public render(): void {
-    const element: React.ReactElement<IPlanningProps> = React.createElement(
-      Planning,
+    const element: React.ReactElement<IInsightsProps> = React.createElement(
+      Insights,
       {
         loginName: this.context.pageContext.user.loginName,
         displayName: this.context.pageContext.user.displayName,
@@ -99,7 +100,6 @@ export default class PlanningWebPart extends BaseClientSideWebPart<IPlanningWebP
   protected get dataVersion(): Version {
     return Version.parse('1.0');
   }
- 
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {

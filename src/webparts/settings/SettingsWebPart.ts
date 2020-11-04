@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-import { override } from "@microsoft/decorators";
 import { Version } from '@microsoft/sp-core-library';
 import {
   IPropertyPaneConfiguration,
@@ -8,22 +7,23 @@ import {
 } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
-import * as strings from 'PlanningWebPartStrings';
-import Planning from './components/Planning';
-import { IPlanningProps } from './components/IPlanningProps';
-import { Providers, SharePointProvider } from '@microsoft/mgt';
+import * as strings from 'SettingsWebPartStrings';
+import Settings from './components/Settings';
+import { ISettingsProps } from './components/ISettingsProps';
 import { loadTheme } from "office-ui-fabric-react";
 const teamsDefaultTheme = require("../../common/teams-default.json");
 const teamsDarkTheme = require("../../common/teams-dark.json");
 const teamsContrastTheme = require("../../common/teams-contrast.json");
 import { ThemeProvider, ThemeChangedEventArgs, IReadonlyTheme } from '@microsoft/sp-component-base';
 import GraphServices from '../../services/GraphServices';
-export interface IPlanningWebPartProps {
+import { IGraphServices } from '../../services/IGraphServices';
+import { Providers, SharePointProvider } from '@microsoft/mgt';
+export interface ISettingsWebPartProps {
   description: string;
 }
 
-export default class PlanningWebPart extends BaseClientSideWebPart<IPlanningWebPartProps> {
-  private graphService:any;
+export default class SettingsWebPart extends BaseClientSideWebPart<ISettingsWebPartProps> {
+  private graphService:IGraphServices;
   private _themeProvider: ThemeProvider;
   private _themeVariant: IReadonlyTheme | undefined;
   protected async onInit(): Promise<void> {
@@ -79,11 +79,10 @@ export default class PlanningWebPart extends BaseClientSideWebPart<IPlanningWebP
     }
   }
   public render(): void {
-    const element: React.ReactElement<IPlanningProps> = React.createElement(
-      Planning,
+    const element: React.ReactElement<ISettingsProps> = React.createElement(
+      Settings,
       {
-        loginName: this.context.pageContext.user.loginName,
-        displayName: this.context.pageContext.user.displayName,
+        context: this.context,
         themeVariant: this._themeVariant,
         graphService:this.graphService
       }
@@ -99,7 +98,6 @@ export default class PlanningWebPart extends BaseClientSideWebPart<IPlanningWebP
   protected get dataVersion(): Version {
     return Version.parse('1.0');
   }
- 
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {

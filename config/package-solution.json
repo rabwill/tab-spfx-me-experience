@@ -45,39 +45,41 @@
       },
       {
         "resource": "Microsoft Graph",
+        "scope": "User.ReadWrite.All"
+      },
+      {
+        "resource": "Microsoft Graph",
         "scope": "User.ReadBasic.All"
       },
-      {  
-        "resource": "Microsoft Graph",  
-        "scope": "Calendars.Read"  
-      } ,
-      {  
-        "resource": "Microsoft Graph",  
-        "scope": "Calendars.ReadWrite"  
-      } ,
-      {  
-        "resource": "Microsoft Graph",  
-        "scope": "Files.Read"  
-      }  ,
-      {  
-        "resource": "Microsoft Graph",  
-        "scope": "Files.Read.All"  
-      } ,
-      {  
-        "resource": "Microsoft Graph",  
-        "scope": "Files.ReadWrite.All"  
-      } ,
-      {  
-        "resource": "Microsoft Graph",  
-        "scope": "Sites.Read.All"  
-      } ,
-      {  
-        "resource": "Microsoft Graph",  
-        "scope": "Sites.ReadWrite.All"  
-      } 
-
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Calendars.Read"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Calendars.ReadWrite"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Files.Read"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Files.Read.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Files.ReadWrite.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Sites.Read.All"
+      },
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Sites.ReadWrite.All"
+      }
     ]
-  
   },
   "paths": {
     "zippedPackage": "solution/me-experience-teams-spfx.sppkg"

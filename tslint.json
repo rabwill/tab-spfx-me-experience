@@ -5,7 +5,6 @@
     "export-name": false,
     "forin": false,
     "label-position": false,
-    "member-access": true,
     "no-arg": false,
     "no-console": false,
     "no-construct": false,

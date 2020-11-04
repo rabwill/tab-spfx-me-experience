@@ -1,8 +1,8 @@
 @import '~office-ui-fabric-react/dist/sass/References.scss';
 @import "../../../common/themeColors.module.scss";
-.planning {
+.insights {
   display: flex;
-  width: max-content;  
+  //width: max-content;
   padding: var(--tasks-padding, 12px);
   .webpartTitle{
     
@@ -10,16 +10,15 @@
     font-weight: 600;
     padding: 20px;
 }
+.felxColumn{
+  flex: 1;
+}
   .container {
-   
-    
+    max-width: 700px;
     margin: 0px auto;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-    
   }
-  .felxColumn{
-    flex: 1;
-  }
+
   .row {
     @include ms-Grid-row;
     @include ms-fontColor-white;
@@ -43,7 +42,6 @@
   .subTitle {
     @include ms-font-l;
     @include ms-fontColor-white;
-    color: purple;
   }
 
   .description {
@@ -85,76 +83,32 @@
       display: inline-block;
     }
   }
-  .documentList{
-    list-style: none;
 
-  }
-  .documentCard{
-    max-height:80px ;
-    margin-top: 10px;
-  }
-  .documentCardTitle{
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 12px;
-
-    font-size: 16px;
-    font-weight: 600;
-  }
-  .documentDivider{
-    position: absolute;
-    height: 2px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-   
-  }
-    
 }
 
-
-[data-theme="default"] {
-  .planning {
-  .webpartTitle{
-    color:$default-color !important;
-  }
-}  
-    
-}
-
-[data-theme="dark"] {
- 
-mgt-tasks{
-  color:$dark-color !important;
-  background-color:$dark-background !important;
-}
-mgt-tasks .Task .TaskContent{
-  color:$dark-color !important;
-  background-color:$dark-background !important;
-}
-
-  .planning {
+  [data-theme="default"] {
+    .insights {
     .webpartTitle{
-    color:$dark-color!important;
+      color:$default-color !important;
+    }
+  }  
+      
   }
-}
-
-}
-
-[data-theme="contrast"] {
+  
+  [data-theme="dark"] {
+    .insights {
+      .webpartTitle{
+      color:$dark-color!important;
+    }
+  }
  
-mgt-tasks{
-  color:$contrast-color !important;
-  background-color:$contrast-background !important;
-}
-mgt-tasks .Task .TaskContent{
-  color:$contrast-color !important;
-  background-color:$contrast-background !important;
-}
-  .planning {
-  .webpartTitle{
-    color:$contrast-color!important;
   }
-}
-     
-}
+
+  [data-theme="contrast"] {
+    .insights {
+    .webpartTitle{
+      color:$contrast-color!important;
+    }
+  }
+       
+  }
