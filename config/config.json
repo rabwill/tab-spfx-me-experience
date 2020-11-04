@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "planning-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/planning/PlanningWebPart.js",
+          "manifest": "./src/webparts/planning/PlanningWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PlanningWebPartStrings": "lib/webparts/planning/loc/{locale}.js"
+  }
+}
