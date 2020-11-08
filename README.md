@@ -1,10 +1,14 @@
-# me-experience-teams-spfx
+# Me experience
+
+A [Me-experience](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for-teams-me-experience/?WT.mc_id=m365-10079-rwilliams) in Microsoft Teams using SharePoint Framework where users can start their day and see their personal information using [Microsoft Graph Toolkit React components](https://docs.microsoft.com/en-us/graph/toolkit/get-started/use-toolkit-with-react/?WT.mc_id=m365-10079-rwilliams).
 
 ## Summary
 
-Short summary on functionality and used technologies.
+Multiple web parts in multiple tabs, using REACT and SPFx. Respects multiple theme in Teams and also have user's settings stored in [Open extensions](https://docs.microsoft.com/en-us/graph/extensibility-open-users) making it completely personalised.
 
-[picture of the solution in action, if possible]
+
+
+![me-experience](./src/docs/me-experience.gif)
 
 ## Used SharePoint Framework Version
 
@@ -12,27 +16,23 @@ Short summary on functionality and used technologies.
 
 ## Applies to
 
-- [SharePoint Framework](https://aka.ms/spfx)
-- [Microsoft 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
+- [SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview?WT.mc_id=m365-10079-rwilliams)
+- [Microsoft 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant/?WT.mc_id=m365-10079-rwilliams)
 
-> Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
+> Get your own free development tenant by subscribing to [Microsoft 365 developer program](https://developer.microsoft.com/en-us/microsoft-365/dev-program/?WT.mc_id=m365-10079-rwilliams)
 
-## Prerequisites
-
-> Any special pre-requisites?
 
 ## Solution
 
 Solution|Author(s)
 --------|---------
-folder name | Author details (name, company, twitter alias with link)
+Rabia Williams | [@williamsrabia](https://twitter.com/williamsrabia)
 
 ## Version history
 
 Version|Date|Comments
 -------|----|--------
-1.1|March 10, 2021|Update comment
-1.0|January 29, 2021|Initial release
+1.0|November 08, 2020|Initial release
 
 ## Disclaimer
 
@@ -46,28 +46,28 @@ Version|Date|Comments
 - Ensure that you are at the solution folder
 - in the command-line run:
   - **npm install**
-  - **gulp serve**
+- Bundle and package up the solution (use below script) and put in `SharePoint` Appcatalog 
 
-> Include any additional steps as needed.
+```
+gulp bundle --ship
 
-## Features
+gulp package-solution --ship
+```
 
-Description of the extension that expands upon high-level summary above.
+- Import the `Me.zip` file from the folder [./teams](./teams) to [App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/app-studio-overview/?WT.mc_id=m365-10079-rwilliams) in your Microsoft Teams.
 
-This extension illustrates the following concepts:
+- In App studio, under Finish > Test and distribute and test the app!
 
-- topic 1
-- topic 2
-- topic 3
 
-> Notice that better pictures and documentation will increase the sample usage and the value you are providing for others. Thanks for your submissions advance.
+## Kudos 👏🏽
 
-> Share your web part with others through Microsoft 365 Patterns and Practices program to get visibility and exposure. More details on the community, open-source projects and other activities from http://aka.ms/m365pnp.
+- [Microsoft Graph Open Extensions](https://joaojmendes.com/2020/04/14/microsoft-graph-open-extensions/) blog by Joao Mendes for providing great sample with themes applied for Teams and open extensions used for user settings.
 
 ## References
 
-- [Getting started with SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-- [Building for Microsoft teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for-teams-overview)
-- [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
-- [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview)
+- [Microsoft Graph Toolkit React components](https://docs.microsoft.com/en-us/graph/toolkit/get-started/use-toolkit-with-react/?WT.mc_id=m365-10079-rwilliams).
+- [Getting started with SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant/?WT.mc_id=m365-10079-rwilliams)
+- [Building for Microsoft teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for-teams-overview/?WT.mc_id=m365-10079-rwilliams)
+- [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis/?WT.mc_id=m365-10079-rwilliams)
+- [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview/?WT.mc_id=m365-10079-rwilliams)
 - [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development

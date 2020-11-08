@@ -19,6 +19,7 @@
   }
   .felxColumn{
     flex: 1;
+    padding-right:10px;
   }
   .row {
     @include ms-Grid-row;

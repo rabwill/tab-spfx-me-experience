@@ -14,7 +14,7 @@ export default class Settings extends React.Component<ISettingsProps, ISettingsS
     this._update = this._update.bind(this);
     this._onChangeText = this._onChangeText.bind(this);
     this.state = {
-      data: { agendaDays: 10 }
+      data: null
     };
   }
 
@@ -52,7 +52,7 @@ export default class Settings extends React.Component<ISettingsProps, ISettingsS
 
         <div >
           <h2 className={styles.text} >Your Me experience settings</h2>
-          {this.state.data &&
+          {this.state.data && 
             <><div>
               <Label className={styles.text} htmlFor={`textTaskDays`}>Get events for this many days ahead</Label>
               <TextField id={`textTaskDays`}
