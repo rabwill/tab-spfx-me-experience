@@ -46,7 +46,7 @@ Version|Date|Comments
 - Ensure that you are at the solution folder
 - in the command-line run:
   - **npm install**
-- Bundle and package up the solution (use below script) and put in `SharePoint` Appcatalog 
+- Bundle and package up the solution (use below script) and deploy to `SharePoint` Appcatalog 
 
 ```
 gulp bundle --ship
@@ -54,7 +54,14 @@ gulp bundle --ship
 gulp package-solution --ship
 ```
 
-- Import the `Me.zip` file from the folder [./teams](./teams) to [App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/app-studio-overview/?WT.mc_id=m365-10079-rwilliams) in your Microsoft Teams.
+- Download the `Me.zip` file from the folder [./teams](./teams)
+
+- Extract the files 
+
+- **Update the tenant urls in the manifest.json file**: Go ahead and update the `staticTabs` urls to 👉🏽  
+https://[yourtenant].sharepoint.com 
+
+- Import  the zip file to [App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/app-studio-overview/?WT.mc_id=m365-10079-rwilliams) in your Microsoft Teams.
 
 - In App studio, under Finish > Test and distribute and test the app!
 
