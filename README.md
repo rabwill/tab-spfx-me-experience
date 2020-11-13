@@ -4,7 +4,7 @@ A [Me-experience](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for
 
 ## Summary
 
-Multiple web parts in multiple tabs, using REACT and SPFx. Respects multiple theme in Teams and also have user's settings stored in [Open extensions](https://docs.microsoft.com/en-us/graph/extensibility-open-users) making it completely personalised.
+Multiple web parts in multiple tabs, using REACT and SPFx. Respects multiple theme in Teams and also have user's settings stored in [Open extensions](https://docs.microsoft.com/graph/extensibility-open-users?WT.mc_id=m365-0000-rabwill) making it completely personalised.
 
 
 
