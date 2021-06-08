@@ -1,11 +1,8 @@
 import * as React from 'react';
 import styles from './Insights.module.scss';
 import { IInsightsProps } from './IInsightsProps';
-import { escape } from '@microsoft/sp-lodash-subset';
-import { Get, Tasks } from 'mgt-react';
-
+import { FileList } from '@microsoft/mgt-react/dist/es6/spfx';
 import { Customizer } from 'office-ui-fabric-react';
-import Files from '../../../common/components/Files';
 
 export interface IInsightsState {
   
@@ -22,22 +19,21 @@ export default class Insights extends React.Component<IInsightsProps,IInsightsSt
       <div className={styles.insights}>              
         <div  className={styles.felxColumn}>
           <div className={styles.webpartTitle}>Trending around me</div>
-          <Get resource="/me/insights/trending" maxPages={1} >
-            <Files template="default" userLoginName={loginName} userDisplayName={displayName} />
-          </Get>
+         
+          <FileList  file-list-query="/me/insights/trending" />
+         
         </div>
 
         <div className={styles.felxColumn}>
           <div className={styles.webpartTitle} >Shared with me</div>
-          <Get resource="/me/insights/shared" maxPages={1} >
-            <Files template="default" userLoginName={loginName} userDisplayName={displayName} />
-          </Get>
+         
+          <FileList  file-list-query="/me/insights/shared" />
         </div>
         <div className={styles.felxColumn}>
           <div  className={styles.webpartTitle}>Viewed and modified by me</div>
-          <Get resource="/me/insights/used" maxPages={1} >
-            <Files template="default" userLoginName={loginName} userDisplayName={displayName} />
-          </Get>
+        
+          <FileList  file-list-query="/me/insights/used" />
+         
         </div>
       </div>
       </Customizer>

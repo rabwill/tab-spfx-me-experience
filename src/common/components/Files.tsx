@@ -1,5 +1,5 @@
 import * as React from "react";
-import { MgtTemplateProps } from "mgt-react";
+import { MgtTemplateProps } from "@microsoft/mgt-react/dist/es6/spfx";
 import {
     DocumentCard,
     DocumentCardActivity,  

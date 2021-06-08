@@ -1,4 +1,4 @@
-import { MgtTemplateProps } from "mgt-react";
+import { MgtTemplateProps } from "@microsoft/mgt-react/dist/es6/spfx";
 import * as React from "react";
 import  styles from './Event.module.scss';
 import { css } from "@uifabric/utilities/lib/css";

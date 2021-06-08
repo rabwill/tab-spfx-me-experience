@@ -10,7 +10,7 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import * as strings from 'InsightsWebPartStrings';
 import Insights from './components/Insights';
 import { IInsightsProps } from './components/IInsightsProps';
-import { Providers, SharePointProvider } from '@microsoft/mgt';
+import { Providers, SharePointProvider } from '@microsoft/mgt-spfx';
 import { loadTheme } from "office-ui-fabric-react";
 const teamsDefaultTheme = require("../../common/teams-default.json");
 const teamsDarkTheme = require("../../common/teams-dark.json");

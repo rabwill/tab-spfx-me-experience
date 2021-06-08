@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-import { override } from "@microsoft/decorators";
+
 import { Version } from '@microsoft/sp-core-library';
 import {
   IPropertyPaneConfiguration,
@@ -11,7 +11,7 @@ import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import * as strings from 'PlanningWebPartStrings';
 import Planning from './components/Planning';
 import { IPlanningProps } from './components/IPlanningProps';
-import { Providers, SharePointProvider } from '@microsoft/mgt';
+import { Providers, SharePointProvider } from '@microsoft/mgt-spfx';
 import { loadTheme } from "office-ui-fabric-react";
 const teamsDefaultTheme = require("../../common/teams-default.json");
 const teamsDarkTheme = require("../../common/teams-dark.json");

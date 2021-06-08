@@ -56,7 +56,7 @@ export default class Settings extends React.Component<ISettingsProps, ISettingsS
             <><div>
               <Label className={styles.text} htmlFor={`textTaskDays`}>Get events for this many days ahead</Label>
               <TextField id={`textTaskDays`}
-                defaultValue={this.state.data.agendaDays.toString()} onChanged={this._onChangeText}
+                defaultValue={this.state.data.agendaDays.toString()} onChange={this._onChangeText}
               />
             </div>
               <div></div>

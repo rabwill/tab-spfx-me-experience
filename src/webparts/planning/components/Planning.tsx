@@ -1,10 +1,10 @@
 import * as React from 'react';
 import styles from './Planning.module.scss';
 import { IPlanningProps } from './IPlanningProps';
-import { Agenda, Tasks, Get } from 'mgt-react';
+import { Agenda, Todo ,FileList} from '@microsoft/mgt-react/dist/es6/spfx';
 import { Customizer } from 'office-ui-fabric-react';
 import MgtEvent from '../../../common/components/Event';
-import Files from '../../../common/components/Files';
+
 
 export interface IPlanningState {
   days: string;
@@ -41,15 +41,14 @@ export default class Planning extends React.Component<IPlanningProps, IPlanningS
         </div>
 
         <div className={styles.felxColumn} >
-        <div className={styles.webpartTitle}>My tasks</div>
-          <Tasks data-source="todo"></Tasks>
+        <div className={styles.webpartTitle}>My todos</div>
+          <Todo data-source="me/todo/lists/tasks/tasks"></Todo>
         </div>
 
         <div className={styles.felxColumn}>
         <div className={styles.webpartTitle}>My recently used documents</div>
-          <Get resource="me/insights/used?filter=resourceVisualization/containerType eq 'Site'" maxPages={1} >
-            <Files template="default" userLoginName={loginName} userDisplayName={displayName} />
-          </Get>
+        <FileList  file-list-query="me/insights/used?filter=resourceVisualization/containerType eq 'Site'" />
+         
         </div>
       </div>
       </Customizer>

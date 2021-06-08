@@ -17,7 +17,7 @@ const teamsContrastTheme = require("../../common/teams-contrast.json");
 import { ThemeProvider, ThemeChangedEventArgs, IReadonlyTheme } from '@microsoft/sp-component-base';
 import GraphServices from '../../services/GraphServices';
 import { IGraphServices } from '../../services/IGraphServices';
-import { Providers, SharePointProvider } from '@microsoft/mgt';
+import { Providers, SharePointProvider } from '@microsoft/mgt-spfx';
 export interface ISettingsWebPartProps {
   description: string;
 }
