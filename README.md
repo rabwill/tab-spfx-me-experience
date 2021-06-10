@@ -32,6 +32,7 @@ Rabia Williams | [@williamsrabia](https://twitter.com/williamsrabia)
 
 Version|Date|Comments
 -------|----|--------
+1.1|June 10, 2021|Replaced custom Files component with MGT FileList component
 1.0|November 08, 2020|Initial release
 
 ## Disclaimer
